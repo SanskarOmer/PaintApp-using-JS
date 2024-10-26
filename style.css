@@ -11,10 +11,40 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #4A98F7;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
-.container {
+.container{
     display: flex;
     width: 100%;
+    gap: 10px;
+    padding: 10px;
     max-width: 1050px;
+}
+section{
+    background: #fff;
+    border-radius: 7px;
+}
+.tools-board{
+    width: 210px;
+    padding: 15px 22px 0;
+}
+.tools-board{
+    width: 210px;
+    padding: 15px 22px 0;
+}
+.tools-board .row{
+    margin-bottom: 20px;
+}
+.row .options{
+    list-style: none;
+    margin: 10px 0 0 5px;
+}
+.row.options.option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.drawing-board{
+    flex: 1;
 }
