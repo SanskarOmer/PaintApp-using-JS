@@ -42,14 +42,23 @@ section{
 }
 .row.options.option{
     display: flex;
+    cursor: pointer;
     align-items: center;
     margin-bottom: 10px;
 }
+.option:is(:hover, .active) img{
+    filter: invert(17%) sepia (98%) saturate (3000%);
+}
 .option :where(span, label){
+    cursor: pointer;
     color: #5A6168;
     padding-left: 10px;
 }
+.option:is(:hover, .active) :where(span, label){
+    color: #4A98F7;
+}
 .option #fill-color{
+    cursor: pointer;
     height: 14px;
     width: 14px;
 }
