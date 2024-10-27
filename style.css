@@ -83,6 +83,7 @@ section{
 }
 .colors .option:nth-child(1){
     background: #fff;
+    border: 1px solid #bfbfbf;
 }
 .colors .option:nth-child(2){
     background: #000;
@@ -96,7 +97,7 @@ section{
 .colors .option:nth-child(5){
     background: #4A98F7;
 }
-.colors .option::before{
+.colors .option:hover::before{
     position: absolute;
     content:"";
     top: 50%;
