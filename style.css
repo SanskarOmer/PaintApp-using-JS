@@ -62,7 +62,7 @@ section{
     height: 14px;
     width: 14px;
 }
-#fill-color:checked ~label{
+#fill-color:checked ~ label{
     color: #4A98F7;
 }
 .option #size-slider{
@@ -97,7 +97,7 @@ section{
 .colors .option:nth-child(5){
     background: #4A98F7;
 }
-.colors .option:hover::before{
+.colors .option.selected::before{
     position: absolute;
     content:"";
     top: 50%;
@@ -108,6 +108,10 @@ section{
     border-radius: inherit;
     border: 2px solid #fff;
     transform: translate(-50%, -50%);
+}
+.option #color-picker{
+    opacity: 0;
+    cursor: pointer;
 }
 
 .buttons button{
