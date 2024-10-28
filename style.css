@@ -109,6 +109,14 @@ section{
     border: 2px solid #fff;
     transform: translate(-50%, -50%);
 }
+.buttons .clear-canvas{
+color: #6C757D;
+border: 1px solid #6C757D;
+}
+.buttons .save-img{
+background: #4A98F7;
+border: 1px solid #4A98F7;
+}
 .drawing-board{
     flex: 1;
 }
