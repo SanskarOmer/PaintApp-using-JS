@@ -109,6 +109,18 @@ section{
     border: 2px solid #fff;
     transform: translate(-50%, -50%);
 }
+
+.buttons button{
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 11px 0;
+    margin-bottom: 13px;
+    background: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 .buttons .clear-canvas{
 color: #6C757D;
 border: 1px solid #6C757D;
