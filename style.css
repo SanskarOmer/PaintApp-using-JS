@@ -116,15 +116,21 @@ section{
     border: none;
     outline: none;
     padding: 11px 0;
+    font-size: 0.9rem;
     margin-bottom: 13px;
     background: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
 }
 .buttons .clear-canvas{
-color: #6C757D;
-border: 1px solid #6C757D;
+    color: #6C757D;
+    border: 1px solid #6C757D;
+    transition: all 0.3s ease;
 }
+.clear-canvas:hover{
+    color: #fff;
+    background: #6C757D;
+ }
 .buttons .save-img{
 background: #4A98F7;
 border: 1px solid #4A98F7;
