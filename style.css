@@ -142,3 +142,7 @@ border: 1px solid #4A98F7;
 .drawing-board{
     flex: 1;
 }
+.drawing-board canvas{
+    width: 100%;
+    height: 100%;
+}
