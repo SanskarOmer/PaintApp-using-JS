@@ -2,6 +2,8 @@ const canvas = document.querySelector("canvas"),
 
 ctx = canvas.getContext("2d");
 
+let brushWidth=5;
+
 let isDrawing=false;
 
 window.addEventListener("load", () => {
@@ -11,7 +13,10 @@ window.addEventListener("load", () => {
 });
 
 const startDraw = () =>{
-    isDrawing=true;
+    isDrawing=true; // start drawing on clicking right mouse key only
+    ctx.beginPath(); // start drawing
+    ctx.lineWidth = brushWidth; // setting line width
+    ctx.strokeStyle = "black"; // setting line color
 }
 
 const drawing = (e) => {
@@ -21,4 +26,4 @@ const drawing = (e) => {
 }
 canvas.addEventListener("mousedown", startDraw);
 canvas.addEventListener("mousemove", drawing);
-canvas.addEventListener("mouseup", () => isDrawing = false);
+canvas.addEventListener("mouseup", () => isDrawing = false); // when key is lifted it stop drawing.
