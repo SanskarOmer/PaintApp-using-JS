@@ -6,6 +6,7 @@ fillColor = document.querySelector("#fill-color");
 sizeSlider = document.querySelector("#size-slider");
 colorBtns = document.querySelectorAll(".colors .option");
 colorPicker = document.querySelector("#color-picker");
+clearCanvas = document.querySelector(".clear-canvas");
 
 let prevMouseX,prevMouseY;
 let isDrawing=false;
@@ -62,7 +63,10 @@ const drawing = (e) => {
     if(!isDrawing) return;
     ctx.putImageData(snapshot,0,0);// added copied data to canvas
 
-    if(selectedTool === "brush") {
+    if(selectedTool === "brush" || selectedTool === "eraser") {
+        //if selected tool is eraser set color to white
+        ctx.strokeStyle = selectedTool ==="eraser" ? "#fff" :selectedColor;
+
         ctx.lineTo(e.offsetX, e.offsetY); // creating line according to the mouse pointer
         ctx.stroke(); // drawing/filing line with color
     } else if(selectedTool === "rectangle"){
@@ -97,6 +101,9 @@ colorPicker.addEventListener("change", () => {
     // passing picked color value from color picker to last color btn background
     colorPicker.parentElement.style.background = colorPicker.value;
     colorPicker.parentElement.click();
+});
+clearCanvas.addEventListener("click", () => {
+    ctx.clearRect(0,0,canvas.width,canvas.height) // to clear whole area
 });
 
 sizeSlider.addEventListener("change", () => brushWidth = sizeSlider.value); // passing slider value as brushSize
