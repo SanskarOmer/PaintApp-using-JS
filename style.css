@@ -82,20 +82,20 @@ section{
     position: relative;
 }
 .colors .option:nth-child(1){
-    background: #fff;
+    background-color: #fff;
     border: 1px solid #bfbfbf;
 }
 .colors .option:nth-child(2){
-    background: #000;
+    background-color: #000;
 }
 .colors .option:nth-child(3){
-    background: #E02020;
+    background-color: #E02020;
 }
 .colors .option:nth-child(4){
-    background: #6DD400;
+    background-color: #6DD400;
 }
 .colors .option:nth-child(5){
-    background: #4A98F7;
+    background-color: #4A98F7;
 }
 .colors .option.selected::before{
     position: absolute;
@@ -108,6 +108,9 @@ section{
     border-radius: inherit;
     border: 2px solid #fff;
     transform: translate(-50%, -50%);
+}
+.colors .option:first-child.selected::before{
+    border-color: ■#ccc;
 }
 .option #color-picker{
     opacity: 0;
