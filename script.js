@@ -7,12 +7,19 @@ sizeSlider = document.querySelector("#size-slider");
 colorBtns = document.querySelectorAll(".colors .option");
 colorPicker = document.querySelector("#color-picker");
 clearCanvas = document.querySelector(".clear-canvas");
+saveImg = document.querySelector(".save-img");
 
 let prevMouseX,prevMouseY;
 let isDrawing=false;
 let brushWidth=5;
 let selectedTool ="brush";
 let selectedColor="#000"
+
+const setBackground = () =>{
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = selectedColor;
+}
 
 window.addEventListener("load", () => {
     // setting canvas width/height offset width/height returns viewable width/height of an element. 
@@ -102,8 +109,21 @@ colorPicker.addEventListener("change", () => {
     colorPicker.parentElement.style.background = colorPicker.value;
     colorPicker.parentElement.click();
 });
+
+
 clearCanvas.addEventListener("click", () => {
     ctx.clearRect(0,0,canvas.width,canvas.height) // to clear whole area
+    setBackground();
+});
+
+
+saveImg.addEventListener("click", () => {
+    // saving current canvas as image
+    const img = canvas.toDataURL("image/png");
+    const a = document.createElement("a");
+    a.href = img;
+    a.download = "image.jpg";
+    a.click();
 });
 
 sizeSlider.addEventListener("change", () => brushWidth = sizeSlider.value); // passing slider value as brushSize
