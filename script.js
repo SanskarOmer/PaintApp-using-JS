@@ -4,6 +4,7 @@ ctx = canvas.getContext("2d"),
 toolBtns = document.querySelectorAll(".tool"),
 fillColor = document.querySelector("#fill-color");
 sizeSlider = document.querySelector("#size-slider");
+colorBtns = document.querySelector("#size-slider");
 
 let prevMouseX,prevMouseY;
 let isDrawing=false;
